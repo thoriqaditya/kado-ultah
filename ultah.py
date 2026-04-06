@@ -1,16 +1,13 @@
 import streamlit as st
+import streamlit.components.v1 as components # Ini tambahan penting untuk memunculkan Spotify
 import time
 
 # --- PENGATURAN HALAMAN ---
-st.set_page_config(
-    page_title="Happy Birthday!", 
-    page_icon="🎂", 
-    layout="centered"
-)
+st.set_page_config(page_title="Happy Birthday!", page_icon="🎂", layout="centered")
 
 # --- AREA EDIT DATA ---
 NAMA_PANGGILAN = "Alfa" 
-UCAPAN_UTAMA = "Selamat Ulang Tahun ke 19!" 
+UCAPAN_UTAMA = "Selamat Ulang Tahun ke 19" 
 PESAN_TAMBAHAN = """
 Semoga di usia yang baru ini, kamu makin bahagia, 
 rezekinya lancar, dan semua impianmu segera terwujud. 
@@ -18,7 +15,6 @@ Doa terbaik pokoknya buat kamu! 🚀✨
 """
 
 # --- EFEK ANIMASI LOVE JATUH ---
-# Ini adalah trik memunculkan hujan emoji hati di layar
 st.markdown("""
 <style>
 @keyframes fall {
@@ -47,11 +43,9 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- KONTEN TAMPILAN ---
-
 st.write(f"# 🎉 HBD {NAMA_PANGGILAN.upper()}! 🎉")
 st.write("---")
 
-# Saya ubah warna kotaknya jadi sedikit pink kemerahan biar cocok sama tema Love!
 st.markdown(f"""
 <div style="
     background-color: #fce4ec; 
@@ -66,7 +60,17 @@ st.markdown(f"""
 </div>
 """, unsafe_allow_html=True)
 
+# --- PEMUTAR SPOTIFY ---
+st.write("Dengerin lagu ini spesial buat kamu! 🎧")
+
+# PASTE KODE EMBED SPOTIFY KAMU DI DALAM TANDA KUTIP TIGA DI BAWAH INI:
+kode_spotify = """
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4PTG3Z6ehGkBFwjybzWkR8?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+"""
+components.html(kode_spotify, height=160)
+
+st.write("---")
 st.caption(f"Dikirim dengan 💖 oleh temanmu di {time.strftime('%Y')}")
 
-# Tetap memunculkan balon sebagai kejutan pertama
+# Tetap memunculkan balon
 st.balloons()
