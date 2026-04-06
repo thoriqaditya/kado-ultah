@@ -1,13 +1,13 @@
 import streamlit as st
-import streamlit.components.v1 as components # Ini tambahan penting untuk memunculkan Spotify
+import streamlit.components.v1 as components 
 import time
 
 # --- PENGATURAN HALAMAN ---
 st.set_page_config(page_title="Happy Birthday!", page_icon="🎂", layout="centered")
 
 # --- AREA EDIT DATA ---
-NAMA_PANGGILAN = "Alfa" 
-UCAPAN_UTAMA = "Selamat Ulang Tahun ke 19" 
+NAMA_PANGGILAN = "Budi" 
+UCAPAN_UTAMA = "Selamat Ulang Tahun!" 
 PESAN_TAMBAHAN = """
 Semoga di usia yang baru ini, kamu makin bahagia, 
 rezekinya lancar, dan semua impianmu segera terwujud. 
@@ -63,9 +63,9 @@ st.markdown(f"""
 # --- PEMUTAR SPOTIFY ---
 st.write("Dengerin lagu ini spesial buat kamu! 🎧")
 
-# PASTE KODE EMBED SPOTIFY KAMU DI DALAM TANDA KUTIP TIGA DI BAWAH INI:
+# KODE SPOTIFY KAMU DIMASUKKAN DI SINI:
 kode_spotify = """
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4PTG3Z6ehGkBFwjybzWkR8?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3hEfpBHxgieRLz4t3kLNEg?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 """
 components.html(kode_spotify, height=160)
 
