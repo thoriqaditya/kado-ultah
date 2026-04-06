@@ -6,8 +6,8 @@ import time
 st.set_page_config(page_title="Happy Birthday!", page_icon="🎂", layout="centered")
 
 # --- AREA EDIT DATA ---
-NAMA_PANGGILAN = "Budi" 
-UCAPAN_UTAMA = "Selamat Ulang Tahun!" 
+NAMA_PANGGILAN = "Alfa Sander" 
+UCAPAN_UTAMA = "Selamat Ulang Tahun Ke 19" 
 PESAN_TAMBAHAN = """
 Semoga di usia yang baru ini, kamu makin bahagia, 
 rezekinya lancar, dan semua impianmu segera terwujud. 
